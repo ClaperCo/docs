@@ -11,8 +11,6 @@ Claper has a two-sided mission:
 
 Claper is supporting these languages: 🇬🇧 English, 🇫🇷 French, 🇩🇪 German, 🇪🇸 Spanish.
 
-If you want to contribute to the translation, take a look at the [translation guide](/translation-guide.html).
-
 Thanks and enjoy Claper!
 
 ![](/preview.png)
