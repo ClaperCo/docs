@@ -1,6 +1,6 @@
 # Prerequisites
 
-You can choose to run Claper directly in your server environment or use Docker to run it in a container. If you decide **to not use Docker**, you need to have the following prerequisites:
+You can choose to run Claper directly in your server environment or use Docker to run it in a container. If you decide **not to use Docker**, you need to have the following prerequisites:
 
 - Postgres >= 15
 - Elixir >= 1.16.2
@@ -12,8 +12,8 @@ You can choose to run Claper directly in your server environment or use Docker t
 
 If you want to use Docker, you just need to have the latest [Docker](https://docs.docker.com/engine/install/) version installed on your server.
 
-:::info Recommandation
-Docker is the most recommended and straight forward way to run Claper. You don't have to be a Docker expert to launch your own instance, but you should have a basic understanding of the command-line and networking to successfully set it up.
+:::info Recommendation
+Docker is the most recommended and easy way to run Claper. You don't have to be a Docker expert to launch your own instance, but you should have a basic understanding of the command-line and networking to successfully set it up.
 :::
 
 ## Hardware requirements

@@ -4,7 +4,7 @@ If you want to contribute to Claper, you can set up a development environment on
 
 ## Setting up a development environment
 
-To set up a development environment, you need to have the [pre-requisites](/self-hosting/prerequisites) installed on your machine.
+To set up a development environment, you need to have the [prerequisites](/self-hosting/prerequisites) installed on your machine.
 
 1. **Clone the repo**
 

@@ -46,11 +46,12 @@ export default defineConfig({
         items: [
           { text: "Account", link: "/usage/account" },
           {
-            text: "Create your first presentation",
+            text: "Create your first event",
             link: "/usage/presentation",
           },
-          { text: "Manager", link: "/usage/manager" },
-          { text: "Questions and Answers", link: "/usage/qa" },
+          { text: "Facilitators", link: "/usage/facilitators" },
+          { text: "Event manager", link: "/usage/manager" },
+          { text: "Questions", link: "/usage/qa" },
           { text: "Forms", link: "/usage/forms" },
           { text: "Polls", link: "/usage/polls" },
           { text: "Web Content", link: "/usage/webcontent" },

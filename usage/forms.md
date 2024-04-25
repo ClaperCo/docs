@@ -1,7 +1,22 @@
 # Forms
 
-You can also add forms during your presentation. Users can fill the form and you can see all submissions in real time.
+It's useful to know your attendees and collect feedback during your presentation. You can create a form with Claper to collect information from your attendees in real-time.
 
-When you create a new presentation, click on **Present/Customize**, select the slide where you want to add form and click **Add interaction**.
+Users can fill the form, and you can see all submissions and export them later.
 
-After your presentation, you can export all the submissions in CSV format.
+## Create a form
+
+First, you have to define a **title**, to identify your form.
+
+Then, you can add **fields** to your form. You can choose between several types of fields:
+
+- **Text**: A simple text field.
+- **Email**: A field to collect email addresses.
+
+You can add as many fields as you want.
+
+## Export submissions
+
+When your event is finished, you can export all the submissions in CSV format.
+
+This is available on your [Report](/usage/reports.md) page.
