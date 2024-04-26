@@ -11,7 +11,7 @@ There are two ways to use Claper:
 
 The Cloud version is the easiest way to use Claper. You don't need to install anything, just create an account and start using it.
 
-When ou create a presentation, you have to choose between different tiers:
+When ou create an event, you have to choose between different tiers:
 
 - **Small**: Free, limited to 25 attendees and a maximum file size of 5MB.
 
@@ -19,10 +19,10 @@ When ou create a presentation, you have to choose between different tiers:
 
 - **Large**: Paid (2 credits), limited to 200 attendees and a maximum file size of 100MB.
 
-When you choose a tier, it is valid for one presentation.
+When you choose a tier, it is valid for one event.
 
 :::warning Be careful
-You cannot change the tier once the presentation is created.
+You cannot change the tier once the event is created.
 :::
 
 ## Self-hosted version
