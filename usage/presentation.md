@@ -14,6 +14,10 @@ When everything is ready, you must **save/export your presentation in PDF or PPT
 It is recommended to use PDF format, which will guarantee you a final rendering identical to the original.
 :::
 
+:::warning PowerPoint/Keynote animations
+If you use animations in your presentation, they will not be displayed.
+:::
+
 You now have your exported presentation and ready to be imported into Claper.
 
 ## Using Claper
