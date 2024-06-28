@@ -56,6 +56,7 @@ export default defineConfig({
           { text: "Polls", link: "/usage/polls" },
           { text: "Web Content", link: "/usage/webcontent" },
           { text: "Reports", link: "/usage/reports" },
+          { text: "LTI integration", link: "/usage/lti" },
         ],
       },
     ],
