@@ -22,7 +22,7 @@ When ou create an event, you have to choose between different tiers:
 When you choose a tier, it is valid for one event.
 
 :::warning Be careful
-You cannot change the tier once the event is created.
+You cannot downgrade the tier once the event is created.
 :::
 
 ## Self-hosted version
