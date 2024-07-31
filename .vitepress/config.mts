@@ -56,7 +56,13 @@ export default defineConfig({
           { text: "Polls", link: "/usage/polls" },
           { text: "Web Content", link: "/usage/webcontent" },
           { text: "Reports", link: "/usage/reports" },
-          { text: "LTI integration", link: "/usage/lti" },
+        ],
+      },
+      {
+        text: "Integrations",
+        items: [
+          { text: "OpenID Connect", link: "/integration/oidc" },
+          { text: "LTI (LMS)", link: "/integration/lti" },
         ],
       },
     ],
