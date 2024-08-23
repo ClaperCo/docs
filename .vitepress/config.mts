@@ -58,6 +58,13 @@ export default defineConfig({
           { text: "Reports", link: "/usage/reports" },
         ],
       },
+      {
+        text: "Integrations",
+        items: [
+          { text: "OpenID Connect", link: "/integration/oidc" },
+          { text: "LTI (LMS)", link: "/integration/lti" },
+        ],
+      },
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/ClaperCo" }],
