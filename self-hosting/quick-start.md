@@ -58,7 +58,7 @@ services:
       - "--api.insecure=true"
       - "--providers.docker=true"
       - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.web.address=:443"
+      - "--entrypoints.websecure.address=:443"
       - "--certificatesresolvers.myresolver.acme.tlschallenge=true"
       - "--certificatesresolvers.myresolver.acme.email=youremail@example.com"
       - "--certificatesresolvers.myresolver.acme.storage=/letsencrypt/acme.json"
@@ -68,6 +68,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    networks:
+      - claper-net
 ```
 
 Make sure to replace `youremail@example.com` with your email address. This is important for SSL certificate generation.
@@ -82,7 +84,7 @@ services:
       - "traefik.enable=true"
       - "traefik.http.routers.app.rule=Host(`claper.example.com`)"
       - "traefik.http.routers.app.tls.certresolver=myresolver"
-      - "traefik.http.routers.app.entrypoints=web"
+      - "traefik.http.routers.app.entrypoints=websecure"
       - "traefik.http.services.app.loadbalancer.server.port=4000"
 ```
 
