@@ -4,6 +4,12 @@ By default, Claper authenticate users with email and password. With OpenID Conne
 
 Refers to the [configuration](/self-hosting/configuration.md) section to see how to set up OpenID Connect on your own instance.
 
+:::warning User emails
+
+To make your identity provider compatible with Claper, all your users should have an email.
+
+:::
+
 ## Callback URL
 
 The callback URL is the link that the external provider will redirect to after the user has authenticated.
