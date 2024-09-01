@@ -4,11 +4,13 @@ By default, Claper authenticate users with email and password. With OpenID Conne
 
 Refers to the [configuration](/self-hosting/configuration.md) section to see how to set up OpenID Connect on your own instance.
 
-:::warning User emails
+## Prerequisites
 
-To make your identity provider compatible with Claper, all your users should have an email.
+To make your identity provider compatible with Claper, you need to check the following:
 
-:::
+- **User emails**: All your users should have an email, so the scope `email` should be defined in the `OIDC_SCOPES` configuration.
+
+- **Authentication method**: Claper only supports the two authentication methods `client_secret_basic` and `client_secret_post`.
 
 ## Callback URL
 
