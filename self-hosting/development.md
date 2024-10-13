@@ -47,13 +47,13 @@ cd assets && npm i
 7. **Allow execution of startup file**
 
 ```sh
-chmod +x ./start.sh
+chmod +x ./dev.sh
 ```
 
 8. **Start Phoenix endpoint with**
 
 ```sh
-./start.sh
+./dev.sh start
 ```
 
 :::info Database
