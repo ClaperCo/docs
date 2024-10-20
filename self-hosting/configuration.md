@@ -240,6 +240,16 @@ Port the application will listen to
 
 Enable/disable user registration
 
+### EMAIL_CONFIRMATION
+
+**Default value**: `false`
+
+**Accepted values**: `true, false`
+
+**Required**: `No`
+
+Enable/disable user email confirmation when they sign up
+
 ### MAX_FILE_SIZE_MB
 
 **Default value**: `15`
