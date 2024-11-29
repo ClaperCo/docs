@@ -28,12 +28,11 @@ If you find a message interesting, you can pin it by clicking on **Pin**. This w
 
 ### Presentation settings
 
-Presentation settings allow you to control what is displayed on the screen. You can show the chat, poll results, or instructions to join the event.
+Presentation settings allow you to control what is displayed on the presentation. You can show the chat, poll results, or instructions to join the event.
 
-- **Show instructions**: Display instructions to join the event on the screen. This is useful if you have attendees who are not familiar with Claper. They can scan the QR code or enter the code to join the event.
-- **Show messages**: Display the chat messages on the screen.
-- **Show only pinned messages**: Display only the pinned messages on the screen.
-- **Show poll results**: Display the poll results on the screen, this will show in real-time the poll results of the active poll.
+- **Show instructions to join**: Display instructions to join the event on the presentation. This is useful if you have attendees who are not familiar with Claper. They can scan the QR code or enter the code to join the event.
+- **Show messages**: Display the chat messages on the presentation.
+- **Show only pinned messages**: Display only the pinned messages on the presentation.
 
 ### Attendees settings
 
@@ -41,8 +40,11 @@ Attendees settings allow you to control the attendees' experience during the eve
 
 - **Enable messages**: Allow attendees to send messages in the chat.
 - **Enable anonymous messages**: Allow attendees to send messages anonymously. This is useful if you want to keep the chat open to everyone. If you disable this option, attendees will have to enter their name to send a message.
-- **Enable message reactions**: Allow attendees to react to messages by clicking on the reaction button. This will show a list of reactions that attendees can choose from.
-- **Show poll results**: Allow attendees to see the poll results on their device. This will show in real-time the poll results of the active poll. If you disable this option, attendees will not see the poll results.
+- **Enable reactions**: Allow attendees to react to messages by clicking on the reaction button. This will show a list of reactions that attendees can choose from.
+
+### Interaction settings
+
+Some interactions like polls and quizzes can have speicific settings, like showing results on the screen or not. Refer to the interaction documentation for more information.
 
 ## Add interactive elements
 

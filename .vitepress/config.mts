@@ -54,6 +54,7 @@ export default defineConfig({
           { text: "Questions", link: "/usage/qa" },
           { text: "Forms", link: "/usage/forms" },
           { text: "Polls", link: "/usage/polls" },
+          { text: "Quizzes", link: "/usage/quizzes" },
           { text: "Web Content", link: "/usage/webcontent" },
           { text: "Reports", link: "/usage/reports" },
         ],
