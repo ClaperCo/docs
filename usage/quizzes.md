@@ -23,3 +23,15 @@ Attendees cannot change their answers once they have submitted the quiz.
 ## Questions review
 
 You can review the quiz answers by clicking the **Review questions** button in the [Event manager](/usage/manager.md). Use the next/previous buttons to navigate through the questions and review your audience's answers. This only affects your presentation view; attendees can independently navigate through the questions on their devices.
+
+## LTI Assignment and Grade Services (Moodle)
+
+:::info Only on self-hosted version
+This feature is available on the self-hosted version of Claper and is not yet available on the Cloud version.
+:::
+
+See [LTI integration](/integration/lti.md) for more information about LMS integration.
+
+Every quizzes you create will be available on your LTI tool in Moodle, as a column, if the event is linked to a resource. 
+
+If an attendee submit quiz answers, he will receive a grade in Moodle.
