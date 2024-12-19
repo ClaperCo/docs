@@ -35,3 +35,9 @@ See [LTI integration](/integration/lti.md) for more information about LMS integr
 Every quizzes you create will be available on your LTI tool in Moodle, as a column, if the event is linked to a resource. 
 
 If an attendee submit quiz answers, he will receive a grade in Moodle.
+
+### Enable grades
+
+When you create a resource on your LMS (Moodle for the example), be sure to enable grade of type _Points_ with maximum value of **100**. 
+
+![Grade in Moodle](/usage/quiz/grade.png)

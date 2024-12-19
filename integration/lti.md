@@ -35,4 +35,4 @@ To use LTI with Assignment and Grade Services (AGS), you need an HTTPS endpoint 
 
 ## Canvas, Blackboard...
 
-These steps should be similar to the Moodle one, but if you have any trouble or want to contribute to the documentation for these LMS, please let us know.
+At this time, only Moodle has been tested with LTI integration. If you have any other LMS that works with LTI, please let us know and we will contribute to the documentation about it.
