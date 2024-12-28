@@ -156,36 +156,6 @@ SMTP password
 
 SMTP port
 
-### SMTP_TLS
-
-**Default value**: `always`
-
-**Accepted values**: `always, never, if_available`
-
-**Required**: `No`
-
-SMTP TLS
-
-### SMTP_AUTH
-
-**Default value**: `always`
-
-**Accepted values**: `always, never, if_available`
-
-**Required**: `No`
-
-SMTP Auth
-
-### SMTP_SSL
-
-**Default value**: `true`
-
-**Accepted values**: `true, false`
-
-**Required**: `No`
-
-SMTP SSL
-
 ### ENABLE_MAILBOX_ROUTE
 
 **Default value**: `false`
