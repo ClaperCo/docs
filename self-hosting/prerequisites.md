@@ -3,10 +3,10 @@
 You can choose to run Claper directly in your server environment or use Docker to run it in a container. If you decide **not to use Docker**, you need to have the following prerequisites:
 
 - Postgres >= 15
-- Elixir = 1.16.2 (OTP 26)
-- Erlang = 26.2.1
+- Elixir >= 1.18
+- Erlang >= 28
 - NPM >= 10
-- NodeJS >= 20
+- NodeJS >= 22
 - Ghostscript >= 10 (for PDF support)
 - Libreoffice >= 24 (for PPT/PPTX support)
 
