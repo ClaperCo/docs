@@ -56,25 +56,30 @@ Edit the `.env` file to match your configuration.
 mix deps.get
 ```
 
-5. **Migrate your database**
+5. **Create your database**
+```sh
+mix ecto.create
+```
+
+6. **Migrate your database**
 
 ```sh
 mix ecto.migrate
 ```
 
-6. **Install JS dependencies**
+7. **Install JS dependencies**
 
 ```sh
 cd assets && npm i
 ```
 
-7. **Allow execution of startup file**
+8. **Allow execution of startup file**
 
 ```sh
 chmod +x ./dev.sh
 ```
 
-8. **Start Phoenix endpoint with**
+9. **Start Phoenix endpoint with**
 
 ```sh
 ./dev.sh start
