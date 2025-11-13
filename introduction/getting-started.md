@@ -4,7 +4,7 @@ Are ready to use Claper ?
 
 There are two ways to use Claper:
 
-- Use the Cloud version available at [app.claper.io](https://app.claper.io)
+- Use the Cloud version available at [app.claper.co](https://app.claper.co)
 - Use the self-hosted version to install on your own server.
 
 ## Cloud version
