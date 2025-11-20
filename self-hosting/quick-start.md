@@ -100,3 +100,10 @@ Don't forget to update the `BASE_URL` in your `.env` file to `https://claper.exa
 :::
 
 Now, you can access your Claper instance at https://claper.example.com.
+
+## Default user
+
+To access Claper for the first time, the default admin user is:
+
+- Email: `admin@claper.co`
+- Password: `claper`
