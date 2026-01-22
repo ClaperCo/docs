@@ -110,7 +110,7 @@ Define how the emails will be sent
 
 ### MAIL_FROM
 
-**Default value**: `Claper`
+**Default value**: `noreply@claper.co`
 
 **Required**: `No`
 
@@ -118,7 +118,7 @@ Email address used to send emails
 
 ### MAIL_FROM_NAME
 
-**Default value**: `noreply@claper.co`
+**Default value**: `Claper`
 
 **Required**: `No`
 
