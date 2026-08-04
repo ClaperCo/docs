@@ -83,16 +83,10 @@ mix ecto.migrate
 cd assets && npm i
 ```
 
-8. **Allow execution of startup file**
+8. **Start the Phoenix endpoint**
 
 ```sh
-chmod +x ./dev.sh
-```
-
-9. **Start Phoenix endpoint with**
-
-```sh
-./dev.sh start
+./with_env.sh mix phx.server
 ```
 
 :::info Database
