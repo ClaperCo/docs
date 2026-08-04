@@ -32,6 +32,12 @@ $ openssl rand -base64 48
 oGBshkO1uLF4wjeFcoQjcRmHxX+YXL1XQKUaBcGVFa/i1mdmYyFWe4ISzTExj+5s
 ```
 
+::: danger Keep this value permanent
+Generate `SECRET_KEY_BASE` only once and store it in persistent secret storage. Reuse the exact same value for every restart, redeployment, update, and application replica. Do not generate it in a container entrypoint or deployment script.
+
+Claper uses this value to encrypt sensitive settings stored in the database, including the Mistral API key. If it changes, those database values remain present but can no longer be decrypted, and the administration interface reports that the API key is not configured. Restoring the previous `SECRET_KEY_BASE` restores access; without it, the affected secrets must be entered again.
+:::
+
 And then we decide on the `BASE_URL` where the instance would be accessible. Let's assume we choose http://claper.example.com
 
 You `.env` file should look like this:

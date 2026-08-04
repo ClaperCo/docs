@@ -40,16 +40,30 @@ More information about the `DATABASE_URL` variable can be found in the [`Ecto.Re
 
 ### Server
 
-| Variable           | Description                                                                      | Required | Default   |
-| ------------------ | -------------------------------------------------------------------------------- | -------- | --------- |
-| `SECRET_KEY_BASE`  | Secret key base, generate with `mix phx.gen.secret` or `openssl rand -base64 48` | ❗Yes    | -         |
-| `BASE_URL`         | Server's base URL, e.g. `https://claper.example.com`                             | ❗Yes    | -         |
-| `PORT`             | Server's port                                                                    | No       | `4000`    |
-| `LISTEN_IP`        | IP to bind the server to, as a string                                            | No       | `0.0.0.0` |
-| `SAME_SITE_COOKIE` | `SameSite` attribute for cookies, `Lax` or `None`                                | No       | `Lax`     |
-| `SECURE_COOKIE`    | `Secure` attribute for cookies, `true` or `false`                                | No       | `false`   |
+| Variable            | Description                                                                      | Required | Default                                                |
+| ------------------- | -------------------------------------------------------------------------------- | -------- | ------------------------------------------------------ |
+| `SECRET_KEY_BASE`   | Secret key base, generate with `mix phx.gen.secret` or `openssl rand -base64 48` | ❗Yes    | -                                                      |
+| `BASE_URL`          | Server's base URL, e.g. `https://claper.example.com`                             | ❗Yes    | -                                                      |
+| `PORT`              | Server's port                                                                    | No       | `4000`                                                 |
+| `LISTEN_IP`         | IP to bind the server to, as a string                                            | No       | `0.0.0.0`                                              |
+| `SAME_SITE_COOKIE`  | `SameSite` attribute for cookies, `Lax` or `None`                                | No       | `Lax`                                                  |
+| `SECURE_COOKIE`     | `Secure` attribute for cookies, `true` or `false`                                | No       | `false`                                                |
+| `REMOTE_IP_PROXIES` | Comma-separated trusted proxy IP addresses or CIDR ranges                       | No       | -                                                      |
+| `REMOTE_IP_HEADERS` | Comma-separated forwarding headers used to determine the client IP              | No       | `forwarded,x-forwarded-for,x-client-ip,x-real-ip`      |
+
+#### Keep `SECRET_KEY_BASE` stable
+
+Generate `SECRET_KEY_BASE` once when installing Claper, then keep the exact same value for the lifetime of the instance. Store it in persistent secret storage provided by your deployment platform, and supply the same value to every application replica. Do not regenerate it when restarting containers, redeploying, or updating Claper.
+
+Claper uses `SECRET_KEY_BASE` to sign sessions and encrypt sensitive settings stored in the database, including the Mistral API key. Changing it invalidates existing sessions and prevents Claper from decrypting previously stored settings. The encrypted values still exist in the database, but the administration interface may report that the Mistral API key is not configured.
+
+If this happens, restore the previous `SECRET_KEY_BASE` and redeploy. If the previous value is unavailable, keep a newly generated value stable and enter the affected secrets again in the administration interface.
+
+When both a secret file and an environment variable are configured, the file at `<CONFIG_DIR>/SECRET_KEY_BASE` takes precedence. Ensure that this file is also persistent and is not recreated with a different value during deployment.
 
 The `LISTEN_IP` variable corresponds with the [`:ip` option for `Plug.Cowboy`](https://hexdocs.pm/plug_cowboy/Plug.Cowboy.html#module-options).
+
+When Claper runs behind a reverse proxy or load balancer, set `REMOTE_IP_PROXIES` to the addresses or CIDR ranges of the proxies whose forwarding headers should be trusted. Do not include untrusted networks. `REMOTE_IP_HEADERS` replaces the default list of headers inspected to determine the original client IP.
 
 ### Features
 
@@ -59,8 +73,12 @@ The `LISTEN_IP` variable corresponds with the [`:ip` option for `Plug.Cowboy`](h
 | `EMAIL_CONFIRMATION`      | Enable/disable sign-up confirmation email, `true` or `false` | No       | `false`          |
 | `LOGOUT_REDIRECT_URL`     | URL to redirect the user to after logout                     | No       | `/`              |
 | `LANGUAGES`               | List of languages users will be able to choose from          | No       | `en,fr,es,it,de` |
+| `TERMS_URL`               | URL of the terms of service shown on the registration page   | No       | -                |
+| `PRIVACY_URL`             | URL of the privacy policy shown on the registration page     | No       | -                |
 
 Languages are specified as a comma-separated list of [ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). The current [list of supported languages](https://github.com/ClaperCo/Claper/tree/dev/priv/gettext)&mdash;thanks to our generous contributors&mdash;is German (`de`), English (`en`), Spanish (`es`), French (`fr`), Hungarian (`hu`), Italian (`it`), Latvian (`lv`) and Dutch (`nl`). Translation of Claper is a community effort. If you find some translation lacking, feel free to [contribute](https://github.com/ClaperCo/Claper?tab=readme-ov-file#contributing).
+
+The registration page displays the legal notice only when both `TERMS_URL` and `PRIVACY_URL` are configured. Each value must be an absolute URL beginning with `http` or `https`.
 
 ## Presentation storage
 
