@@ -26,6 +26,16 @@ cd Claper
 docker compose -f compose.dev.yml up
 ```
 
+4. **Initialize the database**
+
+With the containers running, open another terminal in the project directory and run:
+
+```sh
+docker compose -f compose.dev.yml exec app mix ecto.setup
+```
+
+This command creates the database if needed, runs all migrations and seeds the default administrator account (`admin@claper.co` / `claper`). Change this password after your first login.
+
 ### Manual setup
 
 To set up a development environment, you need to have the [prerequisites](/self-hosting/prerequisites) installed on your machine.
