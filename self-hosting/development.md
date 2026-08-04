@@ -66,24 +66,21 @@ Edit the `.env` file to match your configuration.
 mix deps.get
 ```
 
-5. **Create your database**
-```sh
-mix ecto.create
-```
-
-6. **Migrate your database**
+5. **Initialize the database**
 
 ```sh
-mix ecto.migrate
+./with_env.sh mix ecto.setup
 ```
 
-7. **Install JS dependencies**
+This command loads the database configuration from `.env`, creates and migrates the database, and runs the seed script.
+
+6. **Install JS dependencies**
 
 ```sh
 cd assets && npm i
 ```
 
-8. **Start the Phoenix endpoint**
+7. **Start the Phoenix endpoint**
 
 ```sh
 ./with_env.sh mix phx.server
