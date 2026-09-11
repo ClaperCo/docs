@@ -270,7 +270,14 @@ The following aspects of the integration can be controlled too:
 | `OIDC_SCOPES`                    | Scopes to use                                                                                         | No       | `openid email profile` |
 | `OIDC_PROPERTY_MAPPINGS`         | Mapping of Claper user properties to OIDC user properties                                             | No       | -                      |
 | `OIDC_AUTO_REDIRECT_LOGIN`       | Redirect user to the OIDC authentication process instead of the default login page, `true` or `false` | No       | `false`                |
+| `DISABLE_PASSWORD_LOGIN`        | Disable email/password login and local registration when OIDC is configured, `true` or `false`      | No       | `false`                |
 | `ALLOW_UNLINK_EXTERNAL_PROVIDER` | Allow unlinking of external provider from email/password credentials, `true` or `false`               | No       | `false`                |
+
+`DISABLE_PASSWORD_LOGIN=true` hides the email/password form, **Forgot your password?** link, and **Create account** link. It also blocks password login and local registration on the server, including direct requests, regardless of `ENABLE_ACCOUNT_CREATION`. Password login requests are redirected to `/users/oidc`.
+
+The setting only takes effect when both `OIDC_CLIENT_ID` and `OIDC_CLIENT_SECRET` contain non-blank values. If either is missing, empty, or whitespace-only, Claper logs a startup warning and keeps password login enabled.
+
+Before enabling it, [prepare an OIDC administrator account](/integration/oidc.md#require-oidc-login). `OIDC_AUTO_REDIRECT_LOGIN` controls automatic redirection from the login page; it does not itself disable password authentication.
 
 The `OIDC_PROPERTY_MAPPINGS` defines the mapping of Claper user properties to OIDC user properties (mainly organisation and user roles). A key-value pair where the key is the Claper property and the value is the property name contained in the OIDC claims. For example:
 
@@ -301,3 +308,19 @@ Given this example, a working setup would have the OIDC provider returning the f
   "sub": "e038a2dce4819247f6d0d3aacdde4a9ad2988daa66bf6372713a13babfa61aa4"
 }
 ```
+
+## Realtime transcription
+
+Configure transcription in **Administration → Settings → Transcription Settings**. These settings are stored in the database and are not environment variables in `.env.sample`.
+
+| Setting | Description | Default |
+| ------- | ----------- | ------- |
+| **Enable transcription feature globally** | Make transcription available in the event manager | Disabled |
+| **Mistral API Key** | API key used by the server to connect to Mistral's realtime transcription service | Not configured |
+| **Default Language** | Default language value for transcription sessions; events can store their own language selection | Auto-detect |
+
+Enable the feature, enter a Mistral API key, and click **Save settings**. The key is encrypted in the database using a key derived from `SECRET_KEY_BASE`, so [keep that value stable](#keep-secret-key-base-stable). Leaving the API key field blank when saving preserves the existing key; **Clear** removes it.
+
+The browser capturing audio needs microphone permission and a secure context (HTTPS, or localhost for development). Reverse proxies must support WebSocket connections, including `/audio/websocket`, and the Claper server needs outbound access to `wss://api.mistral.ai/v1/audio/transcriptions/realtime` on port 443.
+
+See [Realtime transcription](/usage/transcription.md) for event setup, language behavior, subtitle display, and transcript exports.

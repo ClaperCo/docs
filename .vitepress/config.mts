@@ -56,6 +56,7 @@ export default defineConfig({
           { text: "Polls", link: "/usage/polls" },
           { text: "Quizzes", link: "/usage/quizzes" },
           { text: "Web Content", link: "/usage/webcontent" },
+          { text: "Realtime transcription", link: "/usage/transcription" },
           { text: "Reports", link: "/usage/reports" },
         ],
       },

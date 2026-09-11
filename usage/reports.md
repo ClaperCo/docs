@@ -33,3 +33,9 @@ In the report, you will see all the interactions that were made during the event
 ## Export
 
 You can export the forms submissions in CSV format. This is useful if you want to analyze the data or import it into another tool.
+
+## Transcriptions
+
+If you used [realtime transcription](/usage/transcription.md) and text was saved during the event, the report includes a **Transcriptions** tab. You can review timestamped segments and load more as needed.
+
+Click **Export (CSV)** in the tab to download all saved transcript segments, including their timestamps, languages, and text.

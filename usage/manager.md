@@ -56,6 +56,12 @@ You have to enable an interaction to make it available to your attendees. To do 
 You can only have one active interaction at a time. If you enable a new interaction, the previous one will be disabled.
 :::
 
+### Realtime transcription
+
+When an administrator has enabled transcription, you can choose **Transcription** from **Add interaction** to configure live subtitles. Select a microphone and choose whether subtitles appear on the presenter screen, attendees' devices, or both, then use the transcription card's toggle to start capturing audio.
+
+Transcription runs independently of the active interaction, so subtitles can stay on while you run polls or quizzes. Keep the event manager open on the computer capturing the microphone. See [Realtime transcription](/usage/transcription.md) for setup and details.
+
 ## Start the presentation
 
 Once you are ready to start the presentation, you can click on the **Open presentation** button. This will open your presentation in a new window and you can start presenting to your attendees. You can show this window on a projector or share your screen with your attendees.
