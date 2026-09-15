@@ -113,3 +113,14 @@ To access Claper for the first time, the default admin user is:
 
 - Email: `admin@claper.co`
 - Password: `claper`
+
+## Easypanel
+
+If you'd rather skip managing Docker Compose and Traefik yourself, Claper has a one-click deployment template on [Easypanel](https://easypanel.io), a self-hosted Docker deployment platform:
+
+[![Deploy on Easypanel][easypanel-btn]][easypanel-deploy]
+
+[easypanel-btn]: https://easypanel.io/img/deploy-on-easypanel-40.svg
+[easypanel-deploy]: https://easypanel.io/templates/claper
+
+![Claper running in the Easypanel dashboard after a one-click deploy](/easypanel-deploy.png)
