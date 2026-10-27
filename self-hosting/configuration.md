@@ -76,7 +76,7 @@ When Claper runs behind a reverse proxy or load balancer, set `REMOTE_IP_PROXIES
 | `TERMS_URL`               | URL of the terms of service shown on the registration page   | No       | -                |
 | `PRIVACY_URL`             | URL of the privacy policy shown on the registration page     | No       | -                |
 
-Languages are specified as a comma-separated list of [ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). The current [list of supported languages](https://github.com/ClaperCo/Claper/tree/dev/priv/gettext)&mdash;thanks to our generous contributors&mdash;is German (`de`), English (`en`), Spanish (`es`), French (`fr`), Hungarian (`hu`), Italian (`it`), Latvian (`lv`) and Dutch (`nl`). Translation of Claper is a community effort. If you find some translation lacking, feel free to [contribute](https://github.com/ClaperCo/Claper?tab=readme-ov-file#contributing).
+Languages are specified as a comma-separated list of [ISO 639 language codes](https://en.wikipedia.org/wiki/List_of_ISO_639_language_codes). The current [list of supported languages](https://github.com/ClaperCo/Claper/tree/dev/priv/gettext)&mdash;thanks to our generous contributors&mdash;is German (`de`), English (`en`), Spanish (`es`), French (`fr`), Hungarian (`hu`), Italian (`it`), Japanese (`ja`), Latvian (`lv`), Dutch (`nl`) and Swedish (`sv`). Translation of Claper is a community effort. If you find some translation lacking, feel free to [contribute](https://github.com/ClaperCo/Claper?tab=readme-ov-file#contributing).
 
 The registration page displays the legal notice only when both `TERMS_URL` and `PRIVACY_URL` are configured. Each value must be an absolute URL beginning with `http` or `https`.
 
@@ -272,12 +272,15 @@ The following aspects of the integration can be controlled too:
 | `OIDC_AUTO_REDIRECT_LOGIN`       | Redirect user to the OIDC authentication process instead of the default login page, `true` or `false` | No       | `false`                |
 | `DISABLE_PASSWORD_LOGIN`        | Disable email/password login and local registration when OIDC is configured, `true` or `false`      | No       | `false`                |
 | `ALLOW_UNLINK_EXTERNAL_PROVIDER` | Allow unlinking of external provider from email/password credentials, `true` or `false`               | No       | `false`                |
+| `OIDC_TRUST_EMAIL_VERIFIED`      | Link a first OIDC sign-in to an existing account with the same email without an email confirmation, `true` or `false` | No       | `false`                |
 
 `DISABLE_PASSWORD_LOGIN=true` hides the email/password form, **Forgot your password?** link, and **Create account** link. It also blocks password login and local registration on the server, including direct requests, regardless of `ENABLE_ACCOUNT_CREATION`. Password login requests are redirected to `/users/oidc`.
 
 The setting only takes effect when both `OIDC_CLIENT_ID` and `OIDC_CLIENT_SECRET` contain non-blank values. If either is missing, empty, or whitespace-only, Claper logs a startup warning and keeps password login enabled.
 
 Before enabling it, [prepare an OIDC administrator account](/integration/oidc.md#require-oidc-login). `OIDC_AUTO_REDIRECT_LOGIN` controls automatic redirection from the login page; it does not itself disable password authentication.
+
+A first OIDC sign-in is linked to an existing account with the same email address only after the user confirms an emailed link. `OIDC_TRUST_EMAIL_VERIFIED=true` skips that step when the provider sends `email_verified=true`. Only enable it for providers that verify every address (for example Google): a self-hosted provider can mark an unverified address as verified and let someone take over an account.
 
 The `OIDC_PROPERTY_MAPPINGS` defines the mapping of Claper user properties to OIDC user properties (mainly organisation and user roles). A key-value pair where the key is the Claper property and the value is the property name contained in the OIDC claims. For example:
 
