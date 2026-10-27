@@ -23,16 +23,17 @@ The engagement rate is an important metric to understand the engagement of your 
 - Polls (p): **All the polls submitted** / (**Number of polls** x **Number of unique attendees**).
 - Forms (f): **All the forms submitted** / (**Number of forms** x **Number of unique attendees**).
 - Quizzes (q): **All the quizzes submitted** / (**Number of quizzes** x **Number of unique attendees**).
+- Word clouds (w): **All the words submitted** / (**Number of word clouds** x **Number of unique attendees**).
 
-**Engagement rate = (m + p + f + q) / 4**
+**Engagement rate = (m + p + f + q + w) / 5**
 
 ## History
 
-In the report, you will see all the interactions that were made during the event. You can see the messages, the polls and the forms that were sent all along the presentation.
+In the report, you will see all the interactions that were made during the event. You can see the messages, the polls, the quizzes, the forms and the word clouds that were sent all along the presentation.
 
 ## Export
 
-You can export the forms submissions in CSV format. This is useful if you want to analyze the data or import it into another tool.
+You can export the forms submissions and the [word cloud](/usage/wordclouds.md) submissions in CSV format. This is useful if you want to analyze the data or import it into another tool.
 
 ## Transcriptions
 

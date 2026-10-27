@@ -44,11 +44,11 @@ Attendees settings allow you to control the attendees' experience during the eve
 
 ### Interaction settings
 
-Some interactions like polls and quizzes can have speicific settings, like showing results on the screen or not. Refer to the interaction documentation for more information.
+Some interactions like polls, quizzes and word clouds can have specific settings, like showing results on the screen or not. Refer to the interaction documentation for more information.
 
 ## Add interactive elements
 
-To add interactive elements like polls or forms, you can click on the **Add interaction** button. You can choose between several interactive elements.
+To add interactive elements like polls, quizzes, word clouds or forms, you can click on the **Add interaction** button. You can choose between several interactive elements.
 
 You have to enable an interaction to make it available to your attendees. To do so, click on the **Set active** button.
 

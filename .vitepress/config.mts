@@ -55,6 +55,7 @@ export default defineConfig({
           { text: "Forms", link: "/usage/forms" },
           { text: "Polls", link: "/usage/polls" },
           { text: "Quizzes", link: "/usage/quizzes" },
+          { text: "Word clouds", link: "/usage/wordclouds" },
           { text: "Web Content", link: "/usage/webcontent" },
           { text: "Realtime transcription", link: "/usage/transcription" },
           { text: "Reports", link: "/usage/reports" },
